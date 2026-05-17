@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quiz Project</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+
+  <header class="navbar">
+
+    <div class="logo-wrap">
+      <div class="logo-icon">👾</div>
+      <h1>QuizTionnaire</h1>
+    </div>
+
+    <nav>
+      <a href="#" id="homeNav">Home</a>
+      <a href="#">Leaderboard</a>
+      <a href="#" id="categoryNav">Categories</a>
+    </nav>
+
+  </header>
+
+  <main class="app-shell">
+
+    <section class="card active" id="startScreen">
+
+      <div class="card-header">
+
+        <span class="badge">Interactive Challenge</span>
+
+        <h2>Pop Culture Quiz</h2>
+
+        <p>
+          Test your knowledge with immersive multiple-choice questions.
+        </p>
+
+      </div>
+
+      <div class="input-group">
+
+        <label>👤 Player Name</label>
+
+        <input
+          type="text"
+          id="playerName"
+          placeholder="Enter your name:"
+        />
+
+      </div>
+
+      <button class="primary-btn" id="continueBtn">
+        Continue
+      </button>
+
+    </section>
+
+    <section class="card" id="categoryScreen">
+
+      <div class="card-header center">
+
+        <span class="badge">Select Mode</span>
+
+        <h2>Choose a Category:</h2>
+
+      </div>
+
+      <div class="category-grid">
+
+        <button class="category-btn" data-category="movies">
+          🎬 Movies
+        </button>
+
+        <button class="category-btn" data-category="games">
+          🎮 Video Games
+        </button>
+
+        <button class="category-btn" data-category="anime">
+          ⛩️ Anime
+        </button>
+
+      </div>
+
+    </section>
+
+    <section class="card" id="quizScreen">
+
+      <div class="quiz-top">
+
+        <div>
+
+          <p class="muted">
+            Question <span id="questionCount">1</span>/10
+          </p>
+
+          <h3 id="questionText"></h3>
+
+        </div>
+
+        <div class="timer-box">
+          <span id="timer">10</span>
+        </div>
+
+      </div>
+
+      <div class="progress-wrapper">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div class="answers" id="answersContainer"></div>
+
+      <div class="quiz-footer">
+
+        <button class="secondary-btn" id="skipBtn">
+          Skip
+        </button>
+
+        <button class="primary-btn" id="nextBtn" disabled>
+          Next Question
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <section class="card" id="resultScreen">
+
+      <div class="result-top">
+
+        <div class="result-circle">
+
+          <span id="finalScore">0</span>
+          <small>/10</small>
+
+        </div>
+
+        <h2>Quiz Completed!</h2>
+
+        <h3 id="playerResultName"></h3>
+
+        <p id="performanceMessage"></p>
+
+      </div>
+
+      <div class="summary-list" id="summaryList"></div>
+
+      <button class="primary-btn" id="restartBtn">
+        Play Again
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
